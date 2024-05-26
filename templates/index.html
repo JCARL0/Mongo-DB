@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Pollution in BCN</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container-pollution">
+            <header class="header-BCN">
+                <h1 class="h1-BCN-header">Pollution in BCN</h1>
+            </header>
+            <main class="container-form main-bcn">
+                <section>
+                    <div class="wrapper">
+                        <div class="div-text-container">
+                            <h2>Welcome</h2>
+                            <p>Enter the neighborhood and the date, and it will show you the pollution history in that area.</p>
+                        </div>
+                        <div class="container-form">
+                            <form action="/result" method="post">
+                                <ul class="form-pollutions-ul">
+                                    <li class="pollution-li">
+                                        <select name="neighborhood" id="neighborhood">
+                                            {% for neighborhood in neighborhoods %}
+                                                <option value="{{ neighborhood }}">{{ neighborhood }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </li>
+                                    <li class="pollution-li">
+                                        <input type="number" name="date" id="date" placeholder="Day" min="1" max="31"required>
+                                    </li>
+                                    <li class="pollution-li">
+                                        <input type="submit" value="Search" required>
+                                    </li>
+                                </ul> 
+                            </form>
+                        </div>
+                        <p class="error_message">{{error_message}}</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

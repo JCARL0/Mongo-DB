@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Search Result</title>
+</head>
+<body>
+    <div class="container-result">
+        <header class="header-BCN">
+            <h1 class="h1-BCN-header">Pollution in BCN</h1>
+        </header>
+        <div class="table-container">
+            <div class="div-text-container">
+                <h1>Results in {{ parameters["neighborhood"] }}, day {{ parameters["date"] }} of March:</h1>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Contaminant</th>
+                        <th>Result</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                        <tr>
+                            <td class="padding-tr">{{ result['desc'] }}</td>
+                            <td class="padding-tr">{{ result['result'] }}</td>
+                            <td class="padding-tr">{{ result['unit'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/">Back to Menu</a>
+        </div>
+    </div>
+</body>
+</html>

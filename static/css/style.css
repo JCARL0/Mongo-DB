@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+:root {
+    --primary-color: #28a745;
+    --secondary-color: #60f181;
+    --background-color: #e9f7ef;
+    --text-color: #fff;
+    --button-color: #155724;
+    --hover-color: #1e7e34;
+    --font-family: "Dosis", sans-serif;
+}
+
+html {
+    background: var(--background-color);
+    color: var(--text-color);
+    height: 100%;
+    font-family: var(--font-family);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-BCN {
+    background-color: var(--primary-color);
+    padding: 1.5em;
+    text-align: center;
+}
+
+.h1-BCN-header {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.div-text-container h2 {
+    font-size: 4em;
+    margin-block: 0.5em;
+    color: #00ff3a;
+}
+
+.div-text-container p {
+    font-size: 20px;
+    margin-block: 30px;
+    color: var(--primary-color);
+}
+
+.form-pollutions-ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.pollution-li {
+    margin-right: 20px;
+    list-style: none;
+}
+
+.pollution-li input, .pollution-li select {
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid #00ff3a;
+    color: #000000;
+    font-size: 1em;
+}
+
+.pollution-li:nth-child(3) input {
+    color: var(--text-color);
+    background: var(--primary-color);
+    padding: 1em 2em;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.pollution-li:nth-child(3) input:hover {
+    background: var(--hover-color);
+}
+
+.flex-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-right img {
+    height: 353px;
+    margin-right: 126px;
+}
+
+::placeholder {
+    color: var(--primary-color);
+}
+
+.error_message {
+    color: rgb(255, 92, 92);
+    font-size: 1.5em;
+    margin-top: 32px;
+    text-align: center;
+}
+
+a {
+    color: var(--text-color);
+    background: #00ff3a;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    margin: 60px auto 0;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a:hover {
+    background: var(--hover-color);
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 2em 0;
+}
+
+.table-container h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--primary-color);
+}
+
+.table-container table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-bottom: 1em;
+}
+
+th, td {
+    border: 2px solid #00000038;
+    padding: 10px;
+    text-align: center;
+    color: #000000;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.container-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-stats h2 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.container-stats img {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+#date::placeholder {
+    color: black;
+}
